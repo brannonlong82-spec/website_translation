@@ -1,8 +1,7 @@
 /**
- * GHL Custom Website Translation Widget with SVG Flag Icons & RTL Support
+ * GHL Custom Website Translation Widget - Top Right Position
  * Author: Brannon Long
- * Description: Self-injecting vanilla JS translation widget featuring real flag images, 
- * full language support, and automatic RTL layout switching.
+ * Description: Self-injecting vanilla JS translation widget positioned in the top right corner.
  */
 
 (function () {
@@ -10,12 +9,12 @@
   if (window.GHLTranslatorLoaded) return;
   window.GHLTranslatorLoaded = true;
 
-  // 2. Inject Scoped CSS Styles for the Widget UI
+  // 2. Inject Scoped CSS Styles (Repositioned to Top Right)
   const style = document.createElement('style');
   style.innerHTML = `
     #ghl-translate-wrapper {
       position: fixed;
-      bottom: 20px;
+      top: 20px;
       right: 20px;
       z-index: 999999;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -90,7 +89,7 @@
   `;
   document.head.appendChild(style);
 
-  // 3. Create Custom Widget HTML Structure (Reordered: en, es, fr, de, zh-CN, ja, ko, he, ar, ps, fa)
+  // 3. Create Custom Widget HTML Structure
   const wrapper = document.createElement('div');
   wrapper.id = 'ghl-translate-wrapper';
   wrapper.innerHTML = `
